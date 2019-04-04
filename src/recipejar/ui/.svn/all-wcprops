@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/svn/!svn/ver/185/RecipeJar/src/recipejar/ui
+END
+SearchDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/189/RecipeJar/src/recipejar/ui/SearchDialog.java
+END
+SearchDialog.form
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/189/RecipeJar/src/recipejar/ui/SearchDialog.form
+END
+UserInterface.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/190/RecipeJar/src/recipejar/ui/UserInterface.java
+END
+rjTextPane.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/185/RecipeJar/src/recipejar/ui/rjTextPane.java
+END
+rjTextPane.form
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/185/RecipeJar/src/recipejar/ui/rjTextPane.form
+END
+IListTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/188/RecipeJar/src/recipejar/ui/IListTable.java
+END
+FilePrefPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/188/RecipeJar/src/recipejar/ui/FilePrefPanel.java
+END
+IListTable.form
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/!svn/ver/185/RecipeJar/src/recipejar/ui/IListTable.form
+END
+UnitConverterDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/188/RecipeJar/src/recipejar/ui/UnitConverterDialog.java
+END
+FilePrefPanel.form
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/svn/!svn/ver/185/RecipeJar/src/recipejar/ui/FilePrefPanel.form
+END
+UnitConverterDialog.form
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/!svn/ver/185/RecipeJar/src/recipejar/ui/UnitConverterDialog.form
+END
+RecipeJarFrame.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/190/RecipeJar/src/recipejar/ui/RecipeJarFrame.java
+END
+PreferencesDialog.java
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/188/RecipeJar/src/recipejar/ui/PreferencesDialog.java
+END
+RecipeJarFrame.form
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/190/RecipeJar/src/recipejar/ui/RecipeJarFrame.form
+END
+PreferencesDialog.form
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/!svn/ver/188/RecipeJar/src/recipejar/ui/PreferencesDialog.form
+END
+TextCellEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/185/RecipeJar/src/recipejar/ui/TextCellEditor.java
+END
+EditorPanel.java
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/188/RecipeJar/src/recipejar/ui/EditorPanel.java
+END
+AlphaTab.java
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/188/RecipeJar/src/recipejar/ui/AlphaTab.java
+END
+EditorPanel.form
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/!svn/ver/185/RecipeJar/src/recipejar/ui/EditorPanel.form
+END
+AlphaTab.form
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/!svn/ver/189/RecipeJar/src/recipejar/ui/AlphaTab.form
+END
+UnitCellEditor.java
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/!svn/ver/188/RecipeJar/src/recipejar/ui/UnitCellEditor.java
+END

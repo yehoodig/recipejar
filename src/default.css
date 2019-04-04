@@ -1,0 +1,42 @@
+/*
+   default.css Written for use by the RecipeJar program.
+
+   Author: James McConnel
+   12/15/09
+*/
+body {
+   background-color: white;
+   color: black;
+
+   font-size: medium;
+   font-family: monospace;
+
+   text-align: left;
+}
+h1 {
+   background-color: inherit;
+   color: black;
+
+   font-family: monospace;
+   text-align: center;
+}
+h3 {
+   background-color: inherit;
+   color: black;
+
+   font-family: monospace;
+}
+hr {}
+ul {
+   background-color: inherit;
+   color: black;
+
+   list-style-type: disc;
+}
+li {}
+div {
+   background-color: inherit;
+   color: black;
+   text-align: left;
+}
+p {}

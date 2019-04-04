@@ -1,0 +1,6 @@
+package recipejar.constants;
+
+public enum UIMode {
+
+   OPEN, INITIAL_STATE, EDITING
+}

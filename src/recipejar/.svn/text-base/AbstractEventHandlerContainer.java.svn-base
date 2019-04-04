@@ -1,0 +1,73 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package recipejar.kernel;
+
+import javax.swing.event.HyperlinkEvent;
+import recipejar.event.ApplicationEvent;
+
+/**
+ *
+ * @author james
+ */
+public abstract class AbstractBackEnd {
+
+   protected UserInterface UI;
+   protected Resources RSC;
+
+   public Resources getResources(){
+      return RSC;
+   }
+
+   public UserInterface getUI() {
+      return UI;
+   }
+
+   public void setUI(UserInterface UI) {
+      this.UI = UI;
+   }
+
+   public abstract void handleEvent_About();
+
+   public abstract void handleEvent_Delete();
+
+   public abstract void handleEvent_Edit();
+
+   public abstract void handleEvent_Exit();
+
+   public abstract void handleEvent_Export();
+
+   public abstract void handleEvent_Help();
+
+   public abstract void handleEvent_Minimize();
+
+   public abstract void handleEvent_NewEmpty();
+
+   public abstract void handleEvent_NewFromClip();
+
+   public abstract void handleEvent_Open(HyperlinkEvent e);
+
+   public abstract void handleEvent_Prefs();
+
+   public abstract void handleEvent_Duplicate();
+
+   public abstract void handleEvent_Save();
+
+   public abstract void handleEvent_Search();
+
+   public abstract void handleEvent_ShowConv();
+
+   public abstract void handleEvent_ZoomWindow();
+
+   public abstract void handleEvent_Cancel();
+
+   public abstract void handleEvent_Cut(ApplicationEvent e);
+
+   public abstract void handleEvent_Copy(ApplicationEvent e);
+
+   public abstract void handleEvent_Paste(ApplicationEvent e);
+
+   public abstract void handleEvent_SelectAll(ApplicationEvent e);
+}

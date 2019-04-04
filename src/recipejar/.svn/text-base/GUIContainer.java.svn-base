@@ -1,0 +1,182 @@
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package recipejar.kernel;
+
+//~--- non-JDK imports --------------------------------------------------------
+import recipejar.constants.UIMode;
+import recipejar.components.EditorPanel;
+import recipejar.components.PreferencesDialog;
+import recipejar.components.RecipeJarFrame;
+import recipejar.components.UnitConverterDialog;
+import recipejar.components.rjTextPane;
+
+//~--- JDK imports ------------------------------------------------------------
+
+import javax.swing.JFileChooser;
+import recipejar.OSAdapter;
+import recipejar.Util;
+import recipejar.components.FilePrefPanel;
+import recipejar.event.ApplicationEvent;
+import recipejar.event.ApplicationEventListener;
+import recipejar.event.Event_Type;
+import recipejar.rjMacMenuListener;
+
+/**
+ *
+ * @author james
+ */
+public class UserInterface {
+
+   private AbstractBackEnd BE;
+   private ApplicationEventListener eventListener;
+   private EditorPanel editPanel;
+   private JFileChooser fc;
+   private RecipeJarFrame frame;
+   private PreferencesDialog prefDiag;
+   private UnitConverterDialog unitDiag;
+   private UIMode currentMode;
+
+//   private UIMode currentMode = UIMode.valueOf(Prefs.CURRENT_MODE.toString());
+   public UserInterface() {
+      eventListener = new ApplicationEventListener() {
+
+         public void onEvent(ApplicationEvent e) {
+            giantEventSwitch(e);
+         }
+      };
+      editPanel = new EditorPanel();
+      frame = new RecipeJarFrame();
+      frame.getAES().addApplicationEventListener(eventListener);
+      editPanel.getAES().addApplicationEventListener(eventListener);
+      frame.getAlphaTab().setIndex(Resources.getInstance().getIndex());
+      frame.getAlphaTab().setStyle(Resources.getInstance().getIndexStyleReader());
+      frame.getAlphaTab().setSelectedTab(Prefs.TAB.toString().charAt(0));
+      editPanel.getTable().setUnits(Resources.getInstance().getUnits());
+      frame.getRjTextPane1().setStyle(Resources.getInstance().getIndexStyle());
+      currentMode = UIMode.INITIAL_STATE;
+   }
+
+   public rjTextPane getPresentationPanel() {
+      return frame.getRjTextPane1();
+   }
+
+   public EditorPanel getEditPanel() {
+      return editPanel;
+   }
+
+   public RecipeJarFrame getFrame() {
+      return frame;
+   }
+
+   public JFileChooser getFileChooser() {
+      return fc;
+   }
+
+   public UnitConverterDialog getUnitConverterDialog() {
+      if (unitDiag == null) {
+         unitDiag = new UnitConverterDialog(frame, false);
+      }
+      return unitDiag;
+   }
+
+   public String getTitleText() {
+      return editPanel.getTitleField().getText();
+   }
+
+   public void setTitleText(String s) {
+      editPanel.getTitleField().setText(s);
+   }
+
+   private void giantEventSwitch(ApplicationEvent e) {
+      switch (e.getType()) {
+         case NEW:
+            BE.handleEvent_NewEmpty();
+            break;
+         case OPEN:
+            BE.handleEvent_Open(e.getHyperlinkE());
+            break;
+         case EXIT:
+            BE.handleEvent_Exit();
+            break;
+         case EDIT_START:
+            BE.handleEvent_Edit();
+            break;
+         case EDIT_CANCEL:
+            BE.handleEvent_Cancel();
+            break;
+         case SHOW_PREFS:
+            BE.handleEvent_Prefs();
+            break;
+         case SHOW_CONV:
+            BE.handleEvent_ShowConv();
+            break;
+         case CUT:
+            BE.handleEvent_Cut(e);
+            break;
+         case COPY:
+            BE.handleEvent_Copy(e);
+            break;
+         case PASTE:
+            BE.handleEvent_Paste(e);
+            break;
+         case SELECT_ALL:
+            BE.handleEvent_SelectAll(e);
+            break;
+      }
+   }
+
+   public void setBackEnd(DefaultBackEnd instance) {
+      BE = instance;
+      instance.setUI(this);
+      if (Util.isOS("mac os x")) {
+         OSAdapter apple = new rjMacMenuListener(BE, this);
+         apple.setup();
+      }
+   }
+
+   public void setMode(UIMode mode) {
+      switch (mode) {
+         case OPEN:
+            frame.getMiEdit().setText(Event_Type.EDIT_START.getCMD());
+            frame.getMiEdit().setEnabled(true);
+            frame.getMiExport().setEnabled(true);
+            frame.getMiDuplicate().setEnabled(true);
+            frame.getMiDelete().setEnabled(true);
+            if (currentMode == UIMode.EDITING) {
+               frame.swapPresentation(frame.getRjTextPane1());
+            }
+            break;
+         case INITIAL_STATE:
+            frame.getMiEdit().setEnabled(false);
+            frame.getMiEdit().setText(Event_Type.EDIT_START.getCMD());
+            if (currentMode == UIMode.EDITING) {
+               frame.swapPresentation(frame.getRjTextPane1());
+            }
+            break;
+         case EDITING:
+            frame.getMiEdit().setText(Event_Type.EDIT_CANCEL.getCMD());
+            frame.getMiEdit().setEnabled(true);
+            frame.swapPresentation(editPanel);
+            break;
+      }
+      currentMode = mode;
+      Prefs.CURRENT_MODE.set(currentMode.name());
+   }
+
+   public PreferencesDialog getPrefsDialog() {
+      if (prefDiag == null) {
+         prefDiag = new PreferencesDialog(frame, true);
+         FilePrefPanel.setFileChooser(fc);
+      }
+      return prefDiag;
+   }
+
+   public UIMode getCurrentMode() {
+      return currentMode;
+   }
+}
+//~ Formatted by Jindent --- http://www.jindent.com
+

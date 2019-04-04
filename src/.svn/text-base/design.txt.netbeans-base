@@ -1,0 +1,16 @@
+Design Philosophies:
+   Separate UI from Operations
+   UI components should be simply presentational with little or no data processing
+   UI component constructors should have no use of program information, like preferences.
+   
+   Internally UI components should have a protected method get[DataSource] which allows controlled access to the information source that the component depends on.
+   Externally there should be a public method set[DataSource] to provide controlled creation to setting of the data source.  
+   Component constructors should not have specialized arguments
+   
+Use files to script various functions and initialization where possible.
+
+Menus can be defined by a file similar to the macros file:
+===========
+Recipe, R                                                  ;create a new menu
+Recipe\Import From, I                                      ;create a submenu
+Recipe\Import From\File..., F, F, ALT-SHIFT, FUNCTION_NAME ;create a menu item

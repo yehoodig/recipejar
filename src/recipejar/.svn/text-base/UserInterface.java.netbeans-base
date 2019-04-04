@@ -1,0 +1,167 @@
+
+/*
+ * TODO Make the stuff in here static, so that it can be accessed anywhere.
+ */
+package recipejar;
+
+//~--- non-JDK imports --------------------------------------------------------
+import recipejar.DefaultActionClearingHouse;
+import javax.swing.JFileChooser;
+import recipejar.Util;
+import recipejar.ui.EditorPanel;
+import recipejar.ui.FilePrefPanel;
+import recipejar.ui.PreferencesDialog;
+import recipejar.ui.RecipeJarFrame;
+import recipejar.ui.UnitConverterDialog;
+import recipejar.ui.rjTextPane;
+import recipejar.config.UIMode;
+import recipejar.config.IndexStyle;
+import recipejar.config.Prefs;
+import recipejar.event.ApplicationEvent;
+import recipejar.event.ApplicationEventListener;
+import recipejar.event.Event_Type;
+
+/**
+ *
+ * @author james
+ */
+public class UserInterface {
+
+   private static ApplicationEventListener eventListener = new ApplicationEventListener() {
+
+          @Override
+         public void onEvent(ApplicationEvent e) {
+            giantEventSwitch(e);
+         }
+      };
+   private static EditorPanel editPanel = new EditorPanel();
+   private static JFileChooser fc;
+   private static RecipeJarFrame frame = new RecipeJarFrame();
+   private static PreferencesDialog prefDiag;
+   private static UnitConverterDialog unitDiag;
+   private static UIMode currentMode = UIMode.INITIAL_STATE;
+
+   public static void initialize() {
+      frame.getApplicationEventSource().addApplicationEventListener(eventListener);
+      editPanel.getApplicationEventSource().addApplicationEventListener(eventListener);
+      frame.getAlphaTab().setStyle(IndexStyle.getReader());
+      frame.getAlphaTab().setSelectedTab(Prefs.TAB.toString().charAt(0));
+      frame.getRjTextPane1().setStyle(IndexStyle.getSource());
+   }
+
+   public static rjTextPane getPresentationPanel() {
+      return frame.getRjTextPane1();
+   }
+
+   public static EditorPanel getEditPanel() {
+      return editPanel;
+   }
+
+   public static RecipeJarFrame getFrame() {
+      return frame;
+   }
+
+   public static JFileChooser getFileChooser() {
+      return fc;
+   }
+
+   public static UnitConverterDialog getUnitConverterDialog() {
+      if (unitDiag == null) {
+         unitDiag = new UnitConverterDialog(frame, false);
+      }
+      return unitDiag;
+   }
+
+   public static String getTitleText() {
+      return editPanel.getTitleField().getText();
+   }
+
+   public static void setTitleText(String s) {
+      editPanel.getTitleField().setText(s);
+   }
+
+   private static void giantEventSwitch(ApplicationEvent e) {
+      switch (e.getType()) {
+         case NEW:
+            DefaultActionClearingHouse.handleEvent_NewEmpty();
+            break;
+         case OPEN:
+            DefaultActionClearingHouse.handleEvent_Open(e.getHyperlinkE());
+            break;
+         case FRAME_CLOSE:
+            if(Util.isOS("mac")){
+                break;
+            }
+         case EXIT:
+            DefaultActionClearingHouse.handleEvent_Exit();
+            break;
+         case EDIT_START:
+            DefaultActionClearingHouse.handleEvent_Edit();
+            break;
+         case EDIT_CANCEL:
+            DefaultActionClearingHouse.handleEvent_Cancel();
+            break;
+         case SHOW_PREFS:
+            DefaultActionClearingHouse.handleEvent_Prefs();
+            break;
+         case SHOW_CONV:
+            DefaultActionClearingHouse.handleEvent_ShowConv();
+            break;
+         case CUT:
+            DefaultActionClearingHouse.handleEvent_Cut(e);
+            break;
+         case COPY:
+            DefaultActionClearingHouse.handleEvent_Copy(e);
+            break;
+         case PASTE:
+            DefaultActionClearingHouse.handleEvent_Paste(e);
+            break;
+         case SELECT_ALL:
+            DefaultActionClearingHouse.handleEvent_SelectAll(e);
+            break;
+      }
+   }
+
+   public static void setMode(UIMode mode) {
+      switch (mode) {
+         case OPEN:
+            frame.getMiEdit().setText(Event_Type.EDIT_START.getCMD());
+            frame.getMiEdit().setEnabled(true);
+            frame.getMiExport().setEnabled(true);
+            frame.getMiDuplicate().setEnabled(true);
+            frame.getMiDelete().setEnabled(true);
+            if (currentMode == UIMode.EDITING) {
+               frame.swapPresentation(frame.getRjTextPane1());
+            }
+            break;
+         case INITIAL_STATE:
+            frame.getMiEdit().setEnabled(false);
+            frame.getMiEdit().setText(Event_Type.EDIT_START.getCMD());
+            if (currentMode == UIMode.EDITING) {
+               frame.swapPresentation(frame.getRjTextPane1());
+            }
+            break;
+         case EDITING:
+            frame.getMiEdit().setText(Event_Type.EDIT_CANCEL.getCMD());
+            frame.getMiEdit().setEnabled(true);
+            frame.swapPresentation(editPanel);
+            break;
+      }
+      currentMode = mode;
+      Prefs.CURRENT_MODE.set(currentMode.name());
+   }
+
+   public static PreferencesDialog getPrefsDialog() {
+      if (prefDiag == null) {
+         prefDiag = new PreferencesDialog(frame, true);
+         FilePrefPanel.setFileChooser(fc);
+      }
+      return prefDiag;
+   }
+
+   public static UIMode getCurrentMode() {
+      return currentMode;
+   }
+}
+//~ Formatted by Jindent --- http://www.jindent.com
+

@@ -1,0 +1,131 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package recipejar.recipe.editor.IList;
+
+import java.util.Vector;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
+import javax.swing.table.AbstractTableModel;
+
+/**
+ *
+ * @author James McConnel
+ */
+public class IListTableModel extends AbstractTableModel implements TableModelListener {
+
+   String[] cnames = {"Qty", "Unit", "Name"};
+   Vector<Ingredient> theList;
+
+   public IListTableModel() {
+      theList = new Vector<Ingredient>();
+
+      addTableModelListener(this);
+   }
+
+   @Override
+   public String getColumnName(int col) {
+      return cnames[col];
+   }
+
+   @Override
+   public int getRowCount() {
+      return theList.size();
+   }
+
+   @Override
+   public int getColumnCount() {
+      return cnames.length;
+   }
+
+   @Override
+   public Object getValueAt(int rowIndex, int columnIndex) {
+      return theList.get(rowIndex).getObject(columnIndex).toString();
+   }
+   
+   public Ingredient getIngredient(int rowIndex){
+      return theList.get(rowIndex);
+   }
+
+   @Override
+   public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
+      Ingredient i = theList.get(rowIndex);
+      if (columnIndex == 0) {
+         i.setQuantity(aValue.toString());
+      } else if (columnIndex == 1) {
+         i.setUnit(Ingredient.Unit.getUnit(aValue.toString()));
+      } else if (columnIndex == 2) {
+         i.setName(aValue.toString());
+      }
+      this.fireTableCellUpdated(rowIndex, columnIndex);
+   }
+
+   @Override
+   public boolean isCellEditable(int rowIndex, int columnIndex) {
+      return true;
+   }
+
+   public void addRow(String qty, String unit, String name) {
+      theList.add(new Ingredient(qty, unit, name));
+      this.fireTableRowsInserted(theList.size() - 1, theList.size() - 1);
+   }
+
+   public void addRow(Object[] data) {
+      theList.add(new Ingredient(data[0].toString(), data[1].toString(), data[2].toString()));
+      this.fireTableRowsInserted(theList.size() - 1, theList.size() - 1);
+   }
+
+   /**
+    * Removes all data elements from the list of ingredients.
+    */
+   public void clear() {
+      theList.removeAllElements();
+   }
+
+   @Override
+   public void tableChanged(TableModelEvent e) {
+      if (e.getType() == TableModelEvent.UPDATE) {
+         //if a new named (column 2) ingredient is added it adds a row.
+         if (getValueAt(getRowCount() - 1, 2) != null &&
+                 !getValueAt(getRowCount() - 1, 2).equals("")) {
+            addRow("", "", "");
+         }
+      }
+   }
+
+   /**
+    * Just removes any rows that do not have a value in column 2 (name).
+    */
+   public void normalize() {
+      for (int i = 0; i < theList.size() - 1; i++) {
+         if (theList.get(i).getName().toString().isEmpty()) {
+            theList.remove(i);
+            i--;
+         }
+      }
+   }
+
+   public boolean moveRowDown(int selectedRow) {
+      if (selectedRow < theList.size() - 2 && selectedRow >= 0) {
+         Ingredient a = theList.remove(selectedRow);
+         theList.insertElementAt(a, selectedRow + 1);
+         this.fireTableDataChanged();
+         return true;
+      } else {
+         return false;
+      }
+   }
+
+   public boolean moveRowUp(int selectedRow) {
+      if (selectedRow >= 1 && selectedRow < theList.size() - 1) {
+         Ingredient a = theList.remove(selectedRow);
+         theList.insertElementAt(a, selectedRow - 1);
+         this.fireTableDataChanged();
+
+         return true;
+      } else {
+         return false;
+      }
+   }
+}

@@ -1,0 +1,219 @@
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package recipejar.kernel;
+
+//~--- non-JDK imports --------------------------------------------------------
+import recipejar.file.UnitFile;
+import recipejar.file.index.IndexFile;
+import recipejar.file.recipe.RecipeFile;
+
+//~--- JDK imports ------------------------------------------------------------
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.StringWriter;
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+import javax.swing.JOptionPane;
+import recipejar.InitFunctions;
+
+/**
+ * Singleton
+ * @author james
+ */
+public class Resources {
+
+   private RecipeFile currentFile = null;
+   private RecipeFile template;
+   private UnitFile units;
+   private IndexFile indexFile;
+   private IndexFile indexTemplate;
+   private File indexStyleSheet;
+   private File recipeFolder;
+   private File recipeStyleSheet;
+   private File welcome;
+
+   private String[] cmdlnParameters;
+
+   private Resources() {
+   }
+
+   public RecipeFile getCurrentlyOpenRecipe() {
+      if (currentFile == null) {
+         if (Prefs.FILE_CURRENT.toString().isEmpty()) {
+            return null;
+         } else {
+            try {
+               return new RecipeFile(Prefs.FILE_CURRENT.toString());
+            } catch (IOException ex) {
+               return null;
+            }
+         }
+      } else {
+         return currentFile;
+      }
+   }
+
+   public void setCurrentlyOpenRecipe(RecipeFile recipeFile) {
+      currentFile = recipeFile;
+      Prefs.FILE_CURRENT.set(recipeFile.getAbsolutePath());
+   }
+
+   public RecipeFile getRecipeTemplateFile() {
+      if (template == null) {
+         try {
+            template = new RecipeFile(Prefs.TEMPLATE_RECIPE.toString());
+         } catch (IOException ex) {
+            Logger.getLogger(Resources.class.getName()).log(Level.SEVERE, null, ex);
+         }
+      }
+      if (!template.exists()) {
+         InitFunctions.extractFile(template);
+      }
+
+      return template;
+   }
+
+   public File getRecipeStyle() {
+      if (recipeStyleSheet == null) {
+         recipeStyleSheet = new File(Prefs.CSS_RECIPE.toString());
+      }
+      if (!recipeStyleSheet.exists()) {
+         InitFunctions.extractFile(recipeStyleSheet);
+      }
+
+      return recipeStyleSheet;
+   }
+
+   public IndexFile getIndex() {
+      if (indexFile == null) {
+         indexFile = new IndexFile(Prefs.FILE_INDEX.toString());
+      }
+      if (!indexFile.exists()) {
+         InitFunctions.extractFile(indexFile);
+      }
+
+      return indexFile;
+   }
+
+   public IndexFile getIndexTemplate() {
+      if (indexTemplate == null) {
+         indexTemplate = new IndexFile(Prefs.TEMPLATE_INDEX.toString());
+      }
+      if (!indexTemplate.exists()) {
+         InitFunctions.extractFile(indexTemplate);
+      }
+      return indexTemplate;
+   }
+
+   public File getIndexStyle() {
+      if (indexStyleSheet == null) {
+         indexStyleSheet = new File(Prefs.CSS_INDEX.toString());
+      }
+      if (!indexStyleSheet.exists()) {
+         InitFunctions.extractFile(indexStyleSheet);
+      }
+      return indexStyleSheet;
+   }
+
+   public FileReader getIndexStyleReader() {
+      FileReader r = null;
+
+      try {
+         r = new FileReader(getIndexStyle());
+      } catch (FileNotFoundException ex) {
+         Logger.getLogger(Resources.class.getName()).log(Level.SEVERE, null, ex);
+
+         return null;
+      }
+
+      return r;
+   }
+
+   public File getRecipeFolder() {
+      if (recipeFolder == null) {
+         recipeFolder = new File(Prefs.DIR_DB.toString());
+      }
+      if (!recipeFolder.exists()) {
+         recipeFolder.mkdir();
+      }
+
+      return recipeFolder;
+   }
+
+   public UnitFile getUnits() {
+      if (units == null) {
+         units = new UnitFile(Prefs.FILE_UNIT.toString());
+      }
+      if (!units.exists()) {
+         InitFunctions.extractFile(units);
+      }
+
+      return units;
+   }
+
+   public File getWelcomeFile() {
+      if (welcome == null) {
+         welcome = new File(Prefs.FILE_WELCOME.toString());
+      }
+      if (!welcome.exists()) {
+         InitFunctions.extractFile(welcome);
+      }
+
+      return welcome;
+   }
+
+   public String getWelcomeMessage() {
+      try {
+         StringWriter s = new StringWriter();
+         FileReader in = new FileReader(getWelcomeFile());
+         int c = in.read();
+         while (c != -1) {
+            s.write(c);
+            c = in.read();
+         }
+         return s.toString();
+      } catch (IOException ex) {
+         JOptionPane.showMessageDialog(null, "Fatal Error.  See \"errorLog.txt\" for more information.");
+         System.exit(1);
+         return null;
+      }
+   }
+
+   public final String getParameter(int i) {
+      return cmdlnParameters[i];
+   }
+
+//  //////////////////////////////////////////////////////////////
+//                 Singleton Stuff
+//  //////////////////////////////////////////////////////////////
+   public static Resources getInstance() {
+      return ApplicationDataHolder.INSTANCE;
+   }
+
+   public void setParams(String[] p) {
+      if (cmdlnParameters != null) {
+         cmdlnParameters = p;
+      }
+   }
+
+   public boolean hasParameters() {
+      return cmdlnParameters == null || cmdlnParameters.length == 0;
+   }
+
+   private static class ApplicationDataHolder {
+
+      private static final Resources INSTANCE = new Resources();
+   }
+//  ///////////////////////////////////////////////////////////////
+}
+//~ Formatted by Jindent --- http://www.jindent.com
+

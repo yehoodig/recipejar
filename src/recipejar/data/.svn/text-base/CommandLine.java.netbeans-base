@@ -1,0 +1,35 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package recipejar.data;
+
+/**
+ * A data source should contain: getters and setters for the source
+ * @author James
+ */
+public class CommandLine{
+    private static String[] src;
+    
+    public static void setSource(String[] s) {
+        src = s;
+    }
+
+    /**
+     * 
+     * Do not make up for deficiencies in other places by initializing the data
+     * source here.  
+     * 
+     */
+    public static String[] getSource() {
+        return src;
+    }
+
+    public void initializeSource() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    public void finalizeSource() {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
+}

@@ -1,0 +1,17 @@
+#! /bin/bash
+
+JARNAME="default"
+if ! test -e build || [ $2 ] || [ $1 == clean ]; then
+   cmds/make
+fi
+if [ $1 ] && [ $1 != "clean" ] ; then
+   JARNAME=$1
+fi
+echo "Re-Building Jar: $JARNAME.jar"
+if [ -e "$JARNAME.jar" ] ; then
+   rm "$JARNAME.jar"
+fi
+
+cd build
+jar -cfmv ../$JARNAME.jar ../buildinfo/manifest.txt @../buildinfo/jarlist
+cd ..

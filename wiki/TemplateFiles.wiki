@@ -1,0 +1,69 @@
+Two Templates are required, one for the Index, and one for recipes.
+These are by default settings/index.html, and settings/template.html respectively.
+This can be changed in the preferences.
+
+=Recipe Template=
+The recipe template is used primarily to store initial content for new recipes,
+and content that is not part of the recipe, but is intended to be common
+to all recipe files.
+
+For example:
+  # The notes div in the body
+  # The ingredients div in the body, and
+  # The procedure div in the body
+
+Are used to populate new recipes.  If for instance, you prefer your recipes
+to be empty when they are created, remove this content, but do NOT remove
+these div elememts themselves, as RecipeJar expects them to be present, and if they are
+not there will likely be a crash.
+
+These elements:
+  # The style element in the head section (See [StyleSheets])
+  # div header
+  # div notes-header
+  # div notes-footer
+  # div ingredients-header
+  # div ingredients-footer
+  # div procedure-header
+  # div procedure-footer
+  # div program-footer
+  # div browser-footer
+  # div export-footer
+
+Also should be present.  The content of these, is common to all recipes.
+For instance, in the default template, section titles are in the header sections.
+
+However, the footer divs are special.  Only one is ever displayed, depending on the circumstances.  The "program-footer" is displayed when viewing the recipe in RecipeJar.  The "browser-footer" is what you will see when viewing the recipe in a web browser, as part of the website/database.  The "export-footer" is what you will see when viewing an exported recipe in a web browser.
+
+The "browser-footer" should include at least one navigational link; to the index.
+The "export-footer" should include anything that is dependent on other resources, like the index.
+
+=Index Template
+The Index Template works similarly to the Recipe Template, but with fewer elements.
+There is a main header, and footer, and then a section header and footer.
+
+The section header and footer is repeated for each of the alphabetized sections
+produced by RecipeJar.  The style element is also important, for more on it see: [StyleSheets]
+
+==Commands==
+If present in one of the headers, or footers, the following
+commands will be processed:
+||* Command *|| *Action* || * Applies to * ||
+||{{{[TITLE]}}}||Inserts the title of the recipe||Index and Recipe templates||
+||{{{[LABELS]}}}||Inserts the recipes labels, as links except in exported recipes||Recipe template||
+||{{{[CREATED]}}}||Inserts the date recipe was created||Index and Recipe templates||
+||{{{[LASTSAVE]}}}||Inserts the date the recipe was last saved||Index and Recipe templates||
+||{{{[VERSION]}}}||Inserts the Name and version of the program||Index and Recipe templates||
+||{{{[AUTHOR]}}}||Inserts the user's name as shown in the preferences dialog||Recipe template||
+||{{{[USERPHONE]}}}||Inserts the user's phone number as shown in the preferences dialog||Recipe template||
+||{{{[USEREMAIL]}}}||Inserts the user's email address as shown in the preferences dialog||Recipe template||
+||{{{[CUSTOM]}}}||Inserts some custom text as shown in the preferences dialog||Recipe template||
+
+
+=Note=
+One last thing, recipes are only updated to conform to the template when they
+are saved, but they are all displayed in RecipeJar with the new template.
+If you change your template after you have already created some
+recipes, the new ones and the old ones will appear different in a browser.
+To fix the problem, just re-save the old ones. Update: Or use the new Tools->Update Recipes
+menu item to fix them all.

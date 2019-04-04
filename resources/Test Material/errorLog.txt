@@ -1,0 +1,808 @@
+
+
+Tue Apr 28 07:55:57 EDT 2009
+RecipeJar 5.2 Build 7
+
+Tue Apr 28 07:57:50 EDT 2009
+RecipeJar 5.2 Build 7
+
+Tue Apr 28 07:59:11 EDT 2009
+RecipeJar 5.2 Build 7
+
+Tue Apr 28 08:02:57 EDT 2009
+RecipeJar 5.2 Build 7
+
+Wed Apr 29 08:56:21 EDT 2009
+RecipeJar 5.2 Build 7
+
+Thu Apr 30 08:26:34 EDT 2009
+RecipeJar 5.2 Build 7
+
+Mon May 11 22:26:55 EDT 2009
+RecipeJar 5.2 Build 7
+
+Wed May 13 10:39:09 EDT 2009
+RecipeJar 5.2 Build 7
+
+Thu May 14 09:55:18 EDT 2009
+RecipeJar 5.2 Build 7
+
+Fri May 22 20:11:22 EDT 2009
+RecipeJar 5.2 Build 7
+
+Mon Jun 15 11:20:38 EDT 2009
+RecipeJar 5.2 Build 7
+
+Mon Jun 15 11:24:56 EDT 2009
+RecipeJar 5.2 Build 7
+
+Fri Jun 26 16:58:16 EDT 2009
+RecipeJar 5.2 Build 7
+
+Fri Jul 17 18:34:27 PDT 2009
+RecipeJar 5.2 Build 7
+
+Thu Jul 30 17:14:35 MDT 2009
+RecipeJar 5.2 Build 7
+
+Thu Jul 30 22:10:08 MDT 2009
+RecipeJar 5.2 Build 7
+
+Fri Jul 31 23:23:44 MDT 2009
+RecipeJar 5.2 Build 7Exception in thread "AWT-EventQueue-0" java.lang.IllegalArgumentException: setSelectedIndex: 21 out of bounds
+	at javax.swing.JComboBox.setSelectedIndex(JComboBox.java:601)
+	at recipejar.recipe.editor.IList.UnitCellEditor.takeKeyStroke(UnitCellEditor.java:49)
+	at recipejar.recipe.editor.IList.IListTable.keyTyped(IListTable.java:76)
+	at java.awt.Component.processKeyEvent(Component.java:6256)
+	at javax.swing.JComponent.processKeyEvent(JComponent.java:2799)
+	at java.awt.Component.processEvent(Component.java:6078)
+	at java.awt.Container.processEvent(Container.java:2085)
+	at java.awt.Component.dispatchEventImpl(Component.java:4667)
+	at java.awt.Container.dispatchEventImpl(Container.java:2143)
+	at java.awt.Component.dispatchEvent(Component.java:4497)
+	at java.awt.KeyboardFocusManager.redispatchEvent(KeyboardFocusManager.java:1848)
+	at java.awt.DefaultKeyboardFocusManager.dispatchKeyEvent(DefaultKeyboardFocusManager.java:704)
+	at java.awt.DefaultKeyboardFocusManager.preDispatchKeyEvent(DefaultKeyboardFocusManager.java:969)
+	at java.awt.DefaultKeyboardFocusManager.typeAheadAssertions(DefaultKeyboardFocusManager.java:841)
+	at java.awt.DefaultKeyboardFocusManager.dispatchEvent(DefaultKeyboardFocusManager.java:668)
+	at java.awt.Component.dispatchEventImpl(Component.java:4539)
+	at java.awt.Container.dispatchEventImpl(Container.java:2143)
+	at java.awt.Window.dispatchEventImpl(Window.java:2475)
+	at java.awt.Component.dispatchEvent(Component.java:4497)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:635)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:296)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:211)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:196)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:188)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+
+
+Sat Aug 01 22:44:19 MDT 2009
+RecipeJar 5.2 Build 7java.io.IOException: End of Stream unexpectedly reached: 
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:185)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:103)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:80)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:443)
+
+
+Sat Aug 01 22:44:43 MDT 2009
+RecipeJar 5.2 Build 7java.io.IOException: End of Stream unexpectedly reached: 
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:185)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:103)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:80)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:443)
+
+
+Sat Aug 01 22:45:54 MDT 2009
+RecipeJar 5.2 Build 7java.io.IOException: End of Stream unexpectedly reached: 
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:185)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:103)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:80)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:443)
+
+
+Sat Aug 01 23:08:29 MDT 2009
+RecipeJar 5.2 Build 7
+
+Sat Aug 01 23:17:38 MDT 2009
+RecipeJar 5.2 Build 7
+
+Sat Aug 01 23:21:40 MDT 2009
+RecipeJar 5.2 Build 7
+
+Sat Aug 01 23:59:48 MDT 2009
+RecipeJar 5.2 Build 7
+
+Sun Aug 02 08:27:00 MDT 2009
+RecipeJar 5.2 Build 8
+
+Sun Aug 02 08:28:57 MDT 2009
+RecipeJar 5.2 Build 8
+
+Sun Aug 02 08:30:44 MDT 2009
+RecipeJar 5.2 Build 8
+
+Sun Aug 02 08:33:10 MDT 2009
+RecipeJar 5.2 Build 8
+
+Sun Aug 02 08:33:40 MDT 2009
+RecipeJar 5.2 Build 8
+
+Sun Aug 02 08:34:26 MDT 2009
+RecipeJar 5.2 Build 8
+
+Sun Aug 02 08:35:01 MDT 2009
+RecipeJar 5.2 Build 8
+
+Sun Aug 02 08:35:34 MDT 2009
+RecipeJar 5.2 Build 8
+
+Sun Aug 02 08:37:50 MDT 2009
+RecipeJar 5.2 Build 8
+
+Mon Aug 03 08:30:22 MDT 2009
+RecipeJar 5.2 Build 8
+
+Mon Aug 03 08:43:41 MDT 2009
+RecipeJar 5.2 Build 8
+
+Mon Aug 03 08:58:50 MDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:336)
+
+
+Mon Aug 03 09:02:48 MDT 2009
+RecipeJar 5.2 Build 8
+
+Mon Aug 03 09:12:25 MDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:336)
+
+
+Mon Aug 03 09:14:49 MDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:336)
+
+
+Mon Aug 03 09:29:04 MDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:336)
+
+
+Mon Aug 03 09:39:55 MDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:336)
+
+
+Mon Aug 03 09:51:18 MDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:336)
+
+
+Mon Aug 03 09:57:30 MDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:336)
+
+
+Mon Aug 03 09:59:24 MDT 2009
+RecipeJar 5.2 Build 8
+
+Mon Aug 03 10:05:15 MDT 2009
+RecipeJar 5.2 Build 8
+
+Mon Aug 03 10:08:00 MDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:336)
+
+
+Wed Sep 09 21:23:34 EDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:336)
+
+
+Wed Sep 09 21:34:42 EDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:336)
+
+
+Wed Sep 09 21:36:23 EDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:336)
+
+
+Wed Sep 09 21:37:03 EDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:336)
+
+
+Wed Sep 09 21:38:10 EDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:336)
+
+
+Wed Sep 09 21:40:25 EDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:336)
+
+
+Wed Sep 09 21:48:25 EDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:336)
+
+
+Wed Sep 09 22:02:25 EDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:336)
+
+
+Wed Sep 09 22:10:11 EDT 2009
+RecipeJar 5.2 Build 8Exception in thread "AWT-EventQueue-0" java.lang.OutOfMemoryError: Java heap space
+	at java.util.Arrays.copyOf(Arrays.java:2882)
+	at java.lang.AbstractStringBuilder.expandCapacity(AbstractStringBuilder.java:100)
+	at java.lang.AbstractStringBuilder.append(AbstractStringBuilder.java:572)
+	at java.lang.StringBuffer.append(StringBuffer.java:320)
+	at java.io.StringWriter.write(StringWriter.java:60)
+	at recipejar.recipe.editor.IList.Ingredient$Unit.initUnitList(Ingredient.java:130)
+	at recipejar.recipe.editor.IList.IngredientList.<init>(IngredientList.java:28)
+	at recipejar.recipe.editor.EditorPanel.initComponents(EditorPanel.java:309)
+	at recipejar.recipe.editor.EditorPanel.<init>(EditorPanel.java:69)
+	at recipejar.recipe.RecipePane.<init>(RecipePane.java:72)
+	at recipejar.RecipeJarFrame.<init>(RecipeJarFrame.java:77)
+	at recipejar.RecipeJarFrame$2.run(RecipeJarFrame.java:330)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:209)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:633)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:296)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:211)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:196)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:188)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+
+
+Wed Sep 09 22:13:02 EDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:336)
+
+
+Wed Sep 09 22:14:00 EDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:336)
+
+
+Wed Sep 09 22:26:19 EDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:336)
+
+
+Wed Sep 09 22:27:04 EDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:336)
+
+
+Wed Sep 09 22:57:19 EDT 2009
+RecipeJar 5.2 Build 8java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:344)
+
+
+Wed Sep 09 22:58:07 EDT 2009
+RecipeJar 5.2 Build 8
+
+Thu Sep 10 09:20:47 EDT 2009
+RecipeJar 5.2 Build 9java.io.IOException: No such file or directory
+	at java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.io.File.createNewFile(File.java:883)
+	at recipejar.rjUtil.extractFile(rjUtil.java:65)
+	at recipejar.rjUtil.unpack(rjUtil.java:164)
+	at recipejar.RecipeJarFrame$2.run(RecipeJarFrame.java:321)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:209)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:633)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:296)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:211)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:196)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:188)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+
+
+Thu Sep 10 09:22:26 EDT 2009
+RecipeJar 5.2 Build 9java.io.IOException: No such file or directory
+	at java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.io.File.createNewFile(File.java:883)
+	at recipejar.rjUtil.extractFile(rjUtil.java:65)
+	at recipejar.rjUtil.unpack(rjUtil.java:164)
+	at recipejar.RecipeJarFrame$2.run(RecipeJarFrame.java:321)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:209)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:633)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:296)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:211)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:196)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:188)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+
+
+Thu Sep 10 09:24:10 EDT 2009
+RecipeJar 5.2 Build 9
+
+Thu Sep 10 09:27:18 EDT 2009
+RecipeJar 5.2 Build 9java.io.IOException: No such file or directory
+	at java.io.UnixFileSystem.createFileExclusively(Native Method)
+	at java.io.File.createNewFile(File.java:883)
+	at recipejar.rjUtil.extractFile(rjUtil.java:65)
+	at recipejar.rjUtil.unpack(rjUtil.java:168)
+	at recipejar.RecipeJarFrame$2.run(RecipeJarFrame.java:321)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:209)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:633)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:296)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:211)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:196)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:188)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+
+
+Thu Sep 10 09:31:01 EDT 2009
+RecipeJar 5.2 Build 9Sep 10, 2009 9:31:44 AM recipejar.RecipeJarFrame$2 run
+SEVERE: null
+java.io.FileNotFoundException: settings/state.ini (No such file or directory)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:106)
+	at java.io.FileReader.<init>(FileReader.java:55)
+	at recipejar.StateManager.<init>(StateManager.java:28)
+	at recipejar.RecipeJarFrame$2.run(RecipeJarFrame.java:323)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:209)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:633)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:296)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:211)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:196)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:188)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException
+	at recipejar.RecipeJarFrame$2.run(RecipeJarFrame.java:329)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:209)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:633)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:296)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:211)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:196)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:188)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+
+
+Thu Sep 10 09:45:39 EDT 2009
+RecipeJar 5.2 Build 9
+
+Thu Sep 10 09:46:10 EDT 2009
+RecipeJar 5.2 Build 9
+
+Thu Sep 10 09:46:43 EDT 2009
+RecipeJar 5.2 Build 9
+
+Thu Sep 10 10:32:11 EDT 2009
+RecipeJar 5.2 Build 9Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:144)
+	at recipejar.recipe.RecipePane.<init>(RecipePane.java:60)
+	at recipejar.RecipeJarFrame.<init>(RecipeJarFrame.java:74)
+	at recipejar.RecipeJarFrame$2.run(RecipeJarFrame.java:340)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:209)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:633)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:296)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:211)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:196)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:188)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+
+
+Thu Sep 10 10:39:59 EDT 2009
+RecipeJar 5.2 Build 9Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:144)
+	at recipejar.recipe.RecipePane.<init>(RecipePane.java:60)
+	at recipejar.RecipeJarFrame.<init>(RecipeJarFrame.java:74)
+	at recipejar.RecipeJarFrame$2.run(RecipeJarFrame.java:341)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:209)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:633)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:296)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:211)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:196)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:188)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+
+
+Thu Sep 10 10:51:22 EDT 2009
+RecipeJar 5.2 Build 9java.io.IOException: End of Stream unexpectedly reached: Egg Flower Soup
+	at recipejar.AbstractXHTMLBasedFile.parseForContentAsText(AbstractXHTMLBasedFile.java:555)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:416)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.parse(AbstractXHTMLBasedFile.java:432)
+	at recipejar.AbstractXHTMLBasedFile.load(AbstractXHTMLBasedFile.java:208)
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:184)
+	at recipejar.Index.IndexFile.mergeDOMWithDir(IndexFile.java:105)
+	at recipejar.Index.AlphaTab.mergeDOMWithDir(AlphaTab.java:82)
+	at recipejar.RecipeJarFrame$2$1.run(RecipeJarFrame.java:349)
+
+
+Wed Oct 21 09:22:47 EDT 2009
+RecipeJar 5.2 Build 9Exception in thread "AWT-EventQueue-0" java.lang.NullPointerException
+	at recipejar.recipe.RecipeFile.<init>(RecipeFile.java:144)
+	at recipejar.recipe.RecipePane.<init>(RecipePane.java:60)
+	at recipejar.RecipeJarFrame.<init>(RecipeJarFrame.java:74)
+	at recipejar.RecipeJarFrame$2.run(RecipeJarFrame.java:343)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:209)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:633)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:296)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:211)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:196)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:188)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:122)
+
+
+Wed Oct 21 12:49:18 EDT 2009
+RecipeJar 5.2 Build 9
+
+Wed Oct 21 12:51:40 EDT 2009
+RecipeJar 5.2 Build 9
+
+Wed Oct 21 12:52:52 EDT 2009
+RecipeJar 5.2 Build 9
+
+Wed Oct 21 13:00:17 EDT 2009
+RecipeJar 5.2 Build 9
+
+Wed Oct 21 13:01:54 EDT 2009
+RecipeJar 5.2 Build 9
+
+Wed Oct 21 13:14:34 EDT 2009
+RecipeJar 5.2 Build 9
+
+Wed Oct 21 13:19:21 EDT 2009
+RecipeJar 5.2 Build 9
+
+Wed Oct 21 13:22:55 EDT 2009
+RecipeJar 5.2 Build 9
+
+Wed Oct 21 19:59:36 EDT 2009
+RecipeJar 5.2 Build 9
+
+Wed Oct 21 20:01:18 EDT 2009
+RecipeJar 5.2 Build 9
+
+Wed Oct 21 21:55:23 EDT 2009
+RecipeJar 5.2 Build 9
+
+Wed Oct 21 22:12:18 EDT 2009
+RecipeJar 5.2 Build 9
+
+Wed Oct 21 22:48:18 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 07:54:21 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 08:14:10 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 08:16:18 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 08:16:48 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 08:19:25 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 08:21:19 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 08:22:50 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 08:24:01 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 11:11:45 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 11:15:38 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 11:20:05 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 11:21:54 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 11:32:36 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 11:36:09 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 11:37:24 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 11:48:00 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 11:50:38 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 11:54:57 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 11:57:25 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 11:59:52 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 12:22:33 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 12:24:13 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 12:26:53 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 12:28:48 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 12:30:30 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 12:35:13 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 13:59:36 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 14:21:04 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 14:26:35 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 14:37:00 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 14:43:27 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 14:50:09 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 14:57:54 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 15:01:14 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 15:18:21 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 18:57:36 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 20:59:29 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 21:00:28 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 21:01:57 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 21:03:45 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 21:06:43 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 21:09:25 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 21:10:53 EDT 2009
+RecipeJar 5.2 Build 9
+
+Fri Oct 23 21:12:47 EDT 2009
+RecipeJar 5.2 Build 9
+
+Sat Oct 24 07:06:26 EDT 2009
+RecipeJar 5.2 Build 9
+
+Sat Oct 24 07:32:07 EDT 2009
+RecipeJar 5.3 Build 0
+
+Sat Oct 24 07:34:10 EDT 2009
+RecipeJar 5.3 Build 0
+
+Sat Oct 24 08:32:05 EDT 2009
+RecipeJar 5.3 Build 1

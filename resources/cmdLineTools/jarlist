@@ -1,0 +1,66 @@
+-C src about.txt
+-C src default.css
+-C src filetree.txt
+-C src index.css
+-C src index.html
+-C src macros.txt
+-C src recipejar.gif
+-C src state.ini
+-C src template.html
+-C src units.txt
+-C src welcome.html
+
+-C build recipejar/AbstractXHTMLBasedFile.class
+-C build recipejar/AbstractXHTMLBasedFile$1.class
+-C build recipejar/AbstractXHTMLBasedFile$Element.class
+-C build recipejar/RecipeJarFrame.class
+-C build recipejar/RecipeJarFrame$1.class
+-C build recipejar/RecipeJarFrame$1$1.class
+-C build recipejar/StateManager.class
+
+-C build recipejar/Index/AlphaTab.class
+-C build recipejar/Index/IndexFile.class
+-C build recipejar/Index/IndexFile$1.class
+-C build recipejar/Index/IndexFile$Anchor.class
+-C build recipejar/Index/IndexFile$Section.class
+
+-C build recipejar/actions/AboutAction.class
+-C build recipejar/actions/AbstractTextAction.class
+-C build recipejar/actions/CopyAction.class
+-C build recipejar/actions/CutAction.class
+-C build recipejar/actions/DeleteAction.class
+-C build recipejar/actions/EditModeAction.class
+-C build recipejar/actions/ExitAction.class
+-C build recipejar/actions/ExportAction.class
+-C build recipejar/actions/HelpAction.class
+-C build recipejar/actions/ImportAction.class
+-C build recipejar/actions/MacroTextAction.class
+-C build recipejar/actions/MacroTextAction$1.class
+-C build recipejar/actions/MacroTextAction$Command.class
+-C build recipejar/actions/MacroTextAction$Stroke.class
+-C build recipejar/actions/MetalLAFAction.class
+-C build recipejar/actions/MotifLAFAction.class
+-C build recipejar/actions/NewAction.class
+-C build recipejar/actions/OpenAction.class
+-C build recipejar/actions/PasteAction.class
+-C build recipejar/actions/PrintAction.class
+-C build recipejar/actions/SaveAction.class
+-C build recipejar/actions/SelectAllAction.class
+-C build recipejar/actions/SystemLAFAction.class
+
+-C build recipejar/recipe/RecipeFile.class
+-C build recipejar/recipe/RecipeFile$Section.class
+-C build recipejar/recipe/RecipePane.class
+-C build recipejar/recipe/ViewerPanel.class
+-C build recipejar/recipe/ViewerPanel$1.class
+
+-C build recipejar/recipe/editor/EditorPanel.class
+-C build recipejar/recipe/editor/EditorPanel$1.class
+-C build recipejar/recipe/editor/EditorPanel$2.class
+-C build recipejar/recipe/editor/IList/IListTable.class
+-C build recipejar/recipe/editor/IList/IListTableModel.class
+-C build recipejar/recipe/editor/IList/Ingredient.class
+-C build recipejar/recipe/editor/IList/Ingredient$Unit.class
+-C build recipejar/recipe/editor/IList/IngredientList.class
+-C build recipejar/recipe/editor/IList/TextCellEditor.class
+-C build recipejar/recipe/editor/IList/UnitCellEditor.class

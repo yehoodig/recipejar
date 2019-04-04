@@ -1,0 +1,21 @@
+#! /bin/bash
+
+if [ $1 ]; then
+   case "$1" in
+      "co" | "checkout" )
+      svn co https://recipejar.googlecode.com/svn/RecipeJar/src src --username yehoodig --password $2
+      ;;
+      "up" | "update" )
+      svn up src --username yehoodig --password $2
+      ;;
+      "ci" | "commit" )
+      svn ci src --username yehoodig --password $2
+      ;;
+      "rm" | "delete" )
+      svn rm $2
+      ;;
+      "add" )
+      svn add $2
+      ;;
+   esac
+fi

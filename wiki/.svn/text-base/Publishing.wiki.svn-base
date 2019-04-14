@@ -1,9 +1,0 @@
-The folder where your Recipes are stored, can function as a standalone website.
-To publish it do the following:
-  # Find some blank webspace
-  # Upload your Recipes folder.
-  # There is no step 3.
-
-To manage how this site looks and behaves see:
-  * TemplateFiles
-  * StyleSheets

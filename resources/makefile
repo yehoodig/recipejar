@@ -40,6 +40,7 @@ RecipeJar.app: dist/RecipeJar.jar
    data/RecipeFile.class \
 :data/Prefs.class
 
+   data/LAFType.class \
    data/Prefs.class \
 :Util.class
 

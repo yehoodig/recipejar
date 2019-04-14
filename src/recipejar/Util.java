@@ -10,7 +10,6 @@ import java.io.StringReader;
 import java.io.StringWriter;
 import java.text.DecimalFormat;
 import javax.swing.KeyStroke;
-import recipejar.data.Prefs;
 
 /**
  *
@@ -207,10 +206,6 @@ public class Util {
               || removeBadChars(text).trim().toUpperCase().equals("INDEX")
               || Util.removeBadChars(text).trim().toUpperCase().equals("CINDEX")
               || text.isEmpty();
-   }
-
-   public static String buildAbsoluteFileNameFrom(String s) {
-      return Prefs.DIR_DB.toString() + removeBadChars(s.trim()) + ".html";
    }
 
    /**

@@ -111,6 +111,10 @@ public enum Prefs {
       }
    }
    
+   public static String buildAbsoluteFileNameFrom(String s) {
+      return DIR_DB.toString() + Util.removeBadChars(s.trim()) + ".html";
+   }
+
     /**
      *
      * @return

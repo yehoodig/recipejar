@@ -38,10 +38,23 @@ RecipeJar.app: dist/RecipeJar.jar
 :data/AbstractXHTMLBasedFile.class
 
    data/RecipeFile.class \
-:data/Prefs.class
+:data/Prefs.class \
+data/Ingredient.class \
+data/IngredientTableModel.class
+
+   data/Ingredient.class \
+:data/Units.class
+
+   data/Units.class \
+:data/UnitFile.class
+
+   data/UnitFile.class \
+:data/AbstractCharDelineatedFile.class
 
    data/Prefs.class \
-:Util.class
+:Util.class \
+data/LAFType.class \
+data/UIMode.class
 
    data/AbstractXHTMLBasedFile.class \
 :data/Element.class

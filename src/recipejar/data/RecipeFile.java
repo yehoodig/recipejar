@@ -31,7 +31,6 @@ public class RecipeFile extends AbstractXHTMLBasedFile {
     ///////////////////////////////////
     //Private
     private ArrayList<Ingredient> ingredients;
-    private IngredientTableModel table;
 
     /**
      * All constructors feed into this for common stuff
@@ -209,7 +208,7 @@ public class RecipeFile extends AbstractXHTMLBasedFile {
                         textStroke = textStroke + labels[i];
                     } else {
                         textStroke = textStroke + "<a href=\"" + "index.html#"
-                                + recipejar.data.IndexFile.underscoreSpaces(labels[i].trim()) + "\">"
+                                + recipejar.Util.underscoreSpaces(labels[i].trim()) + "\">"
                                 + labels[i].trim() + "</a>";
                     }
                 }
@@ -446,19 +445,6 @@ public class RecipeFile extends AbstractXHTMLBasedFile {
 
     public int getIngredientListSize() {
         return ingredients.size();
-    }
-
-    /**
-     * Returns this file's ingredient table model
-     *
-     * @return
-     */
-    public IngredientTableModel getIngredientTableModel() {
-        if (table == null) {
-            return table = new IngredientTableModel(this);
-        } else {
-            return table;
-        }
     }
 
     /**

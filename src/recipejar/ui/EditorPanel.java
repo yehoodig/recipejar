@@ -65,6 +65,20 @@ public class EditorPanel extends JPanel implements DocumentListener, TableModelL
       startListening();
    }
 
+    /**
+     * Returns this file's ingredient table model
+     *
+     * @return
+     */
+    public IngredientTableModel getIngredientTableModel(RecipeFile r) {
+        if (table == null) {
+            return table = new IngredientTableModel(r);
+        } else {
+            return table;
+        }
+    }
+
+
    /**
     *
     * @return
@@ -560,7 +574,7 @@ private void fireSaveEvent(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fi
       titleField.setText(f.getTitle());
       notesField.setText(f.getNotes());
       procedureField.setText(f.getProcedure());
-      iListTable1.setModel(f.getIngredientTableModel());
+      iListTable1.setModel(getIngredientTableModel(f));
       labelField.setText(f.getLabelsAsString());
    }
 }

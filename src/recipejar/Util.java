@@ -17,6 +17,33 @@ import javax.swing.KeyStroke;
  */
 public class Util {
 
+   public static String underscoreSpaces(String cat) {
+      StringWriter s = new StringWriter();
+      for (int i = 0; i < cat.length(); i++) {
+         int c = cat.charAt(i);
+         if (c == ' ') {
+            s.write('_');
+         } else {
+            s.write(c);
+         }
+      }
+      return s.toString();
+   }
+
+   public static String spaceUnderscores(String cat) {
+      StringWriter s = new StringWriter();
+      for (int i = 0; i < cat.length(); i++) {
+         int c = cat.charAt(i);
+         if (c == '_') {
+            s.write(' ');
+         } else {
+            s.write(c);
+         }
+      }
+      return s.toString();
+
+   }
+
    public static boolean isOS(String s) {
       return (System.getProperty("os.name").toLowerCase().indexOf(s) != -1);
    }

@@ -26,33 +26,6 @@ import recipejar.data.RecipeFile;
  */
 public class IndexFile extends AbstractXHTMLBasedFile {
 
-   public static String underscoreSpaces(String cat) {
-      StringWriter s = new StringWriter();
-      for (int i = 0; i < cat.length(); i++) {
-         int c = cat.charAt(i);
-         if (c == ' ') {
-            s.write('_');
-         } else {
-            s.write(c);
-         }
-      }
-      return s.toString();
-   }
-
-   private static String spaceUnderscores(String cat) {
-      StringWriter s = new StringWriter();
-      for (int i = 0; i < cat.length(); i++) {
-         int c = cat.charAt(i);
-         if (c == '_') {
-            s.write(' ');
-         } else {
-            s.write(c);
-         }
-      }
-      return s.toString();
-
-   }
-
    private EnumMap<Section, HashMap<String, ArrayList<Anchor>>> anchors;
 
    public IndexFile(String name){
@@ -299,7 +272,7 @@ public class IndexFile extends AbstractXHTMLBasedFile {
     * @return The vector of anchors mapped to the given key.
     */
    public ArrayList<Anchor> getList(Section s, String key) {
-      return anchors.get(s).get(IndexFile.underscoreSpaces(key));
+      return anchors.get(s).get(recipejar.Util.underscoreSpaces(key));
    }
 
    /**
@@ -309,7 +282,7 @@ public class IndexFile extends AbstractXHTMLBasedFile {
     * @param a The ArrayList to add.
     */
    public void putList(Section s, String key, ArrayList<Anchor> a) {
-      anchors.get(s).put(underscoreSpaces(key), a);
+      anchors.get(s).put(recipejar.Util.underscoreSpaces(key), a);
    }
 
    /**
@@ -322,7 +295,7 @@ public class IndexFile extends AbstractXHTMLBasedFile {
          Object[] keys = getSection(Section.values()[i]).keySet().toArray();
          for (int j = 0; j < keys.length; j++) {
             if (!keys[j].equals("DEFAULT")) {
-               categories.add(spaceUnderscores(keys[j].toString()));
+               categories.add(recipejar.Util.spaceUnderscores(keys[j].toString()));
             }
          }
       }
@@ -356,7 +329,7 @@ public class IndexFile extends AbstractXHTMLBasedFile {
       Arrays.sort(ckeys);
       for (int j = 0; j < ckeys.length; j++) {//each category
          if (!ckeys[j].toString().equals("DEFAULT")) {
-            out.write("\n      <ul id=\"" + ckeys[j] + "\"><h3>" + spaceUnderscores((String) ckeys[j]) + "</h3>\n");
+            out.write("\n      <ul id=\"" + ckeys[j] + "\"><h3>" + recipejar.Util.spaceUnderscores((String) ckeys[j]) + "</h3>\n");
             ArrayList<Anchor> list = anchors.get(s).get(ckeys[j].toString());
             Collections.sort(list);
             for (int k = 0; k < list.size(); k++) {//each anchor
@@ -477,7 +450,7 @@ public class IndexFile extends AbstractXHTMLBasedFile {
     * @throws java.io.IOException
     */
    private boolean removeLink(RecipeFile oldFile, String c) throws IOException {
-      String category = underscoreSpaces(c);
+      String category = recipejar.Util.underscoreSpaces(c);
       Section sec;
       if (category.equals("DEFAULT")) {
          sec = Section.parse(oldFile.getName());

@@ -9,9 +9,9 @@ package recipejar.data;
  * @author James
  */
 public class IndexTemplate{
-    private static IndexFile src;
+    private static AbstractXHTMLBasedFile src;
     
-    public static void setSource(IndexFile s) {
+    public static void setSource(AbstractXHTMLBasedFile s) {
         src = s;
     }
 
@@ -21,7 +21,7 @@ public class IndexTemplate{
      * source here.  
      * 
      */
-    public static IndexFile getSource() {
+    public static AbstractXHTMLBasedFile getSource() {
        return src;
     }
 

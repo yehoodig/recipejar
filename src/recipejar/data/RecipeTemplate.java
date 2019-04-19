@@ -11,9 +11,9 @@ package recipejar.data;
  */
 public class RecipeTemplate {
 
-    private static RecipeFile src = null;
+    private static AbstractXHTMLBasedFile src = null;
 
-    public static void setSource(RecipeFile s) {
+    public static void setSource(AbstractXHTMLBasedFile s) {
         src = s;
     }
 
@@ -23,7 +23,7 @@ public class RecipeTemplate {
      * source here.
      *
      */
-    public static RecipeFile getSource() {
+    public static AbstractXHTMLBasedFile getSource() {
         return src;
     }
 

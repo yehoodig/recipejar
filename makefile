@@ -31,7 +31,8 @@ RecipeJar.app: dist/RecipeJar.jar
 # syntax:
 #   dependent1 \
 #   dependent2 \
-#:dependency
+#:taxpayer1 \
+#taxpayer2
 
    data/RecipeFile.class \
    data/IndexFile.class \
@@ -40,7 +41,8 @@ RecipeJar.app: dist/RecipeJar.jar
    data/RecipeFile.class \
 :data/Prefs.class \
 data/Ingredient.class \
-data/IngredientTableModel.class
+data/RecipeTemplate.class \
+Util.class
 
    data/Ingredient.class \
 :data/Units.class
@@ -60,7 +62,10 @@ data/UIMode.class
 :data/Element.class
 
    data/IndexFile.class \
-:data/RecipeFile.class
+:data/RecipeFile.class \
+data/IndexTemplate.class \
+data/Anchor.class \
+Util.class
 
    ui/AlphaTab.class \
 :data/IndexFile.class

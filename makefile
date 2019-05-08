@@ -9,10 +9,10 @@ vpath %.class build/classes
 
 JAVAC= javac -g -d build -classpath build
 RESOURCES = src/about.txt src/default.css src/filetree.txt src/index.css \
-            src/index.html src/macros.txt src/recipejar.gif src/state.ini \
-            src/template.html src/units.txt src/welcome.html
+            src/index.template src/macros.txt src/recipejar.gif \
+            src/recipe.template src/units.txt src/welcome.html
 
-dist/RecipeJar.jar: RecipeJarFrame.class cmdLineTools/manifest.txt $(RESOURCES)
+dist/RecipeJar.jar: Main.class cmdLineTools/manifest.txt $(RESOURCES)
 	jar -cfm dist/RecipeJar.jar cmdLineTools/manifest.txt @cmdLineTools/jarlist
 
 RecipeJar.app: dist/RecipeJar.jar
@@ -51,7 +51,8 @@ Util.class
 :data/UnitFile.class
 
    data/UnitFile.class \
-:data/AbstractCharDelineatedFile.class
+:data/AbstractCharDelineatedFile.class \
+data/Unit.class
 
    data/Prefs.class \
 :Util.class \
@@ -68,18 +69,66 @@ data/Anchor.class \
 Util.class
 
    ui/AlphaTab.class \
-:data/IndexFile.class
-
-# end File Type dependencies
-
-   RecipeJarFrame.class \
-:ui/AlphaTab.class
+:data/IndexFile.class \
+data/Index.class
 
    recipe/editor/IList/UnitCellEditor.class \
    recipe/editor/IList/IngredientList.class \
    recipe/editor/IList/IListTable.class \
 :recipe/editor/IList/Ingredient.class
 
+# Full list of classes
+   Main.class \
+:OSAdapter.class \
+Util.class \
+data/AbstractCharDelineatedFile.java \
+data/AbstractXHTMLBasedFile.java \
+data/Anchor.class \
+event/DefaultActionClearingHouse.class \
+ui/UserInterface.class \
+data/Data.class \
+data/Element.class \
+data/Index.class \
+data/IndexFile.class \
+data/IndexStyle.class \
+data/IndexTemplate.class \
+data/Ingredient.class \
+data/IngredientTableModel.class \
+data/LAFType.class \
+data/Macro.class \
+data/MacroFile.class \
+data/Macros.class \
+data/Prefs.class \
+data/Recipe.class \
+data/RecipeFile.class \
+data/RecipeTemplate.class \
+data/StyleSheet.class \
+data/UIMode.class \
+data/Unit.class \
+data/UnitFile.class \
+data/Units.class \
+data/WelcomeMsg.class \
+event/AbstractTextAction.class \
+event/ApplicationEvent.class \
+event/ApplicationEventListener.class \
+event/ApplicationEventSource.class \
+event/Event_Type.class \
+event/IndexKeyListener.class \
+event/MacroTextAction.class \
+ui/AlphaTab.class \
+ui/AlphaTab.class \
+ui/EditorPanel.class \
+ui/FilePrefPanel.class \
+ui/IListTable.class \
+ui/PreferencesDialog.class \
+ui/RecipeJarFrame.class \
+ui/SearchDialog.class \
+ui/TextCellEditor.class \
+ui/UnitCellEditor.class \
+ui/UnitConverterDialog.class \
+ui/rjTextPane.class \
+
+# end File Type dependencies
 
 #
 # implicit rule for Java files

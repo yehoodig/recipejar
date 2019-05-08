@@ -13,6 +13,7 @@
  */
 package recipejar.ui;
 
+import java.awt.geom.Rectangle2D;
 import java.awt.Rectangle;
 import java.awt.event.KeyListener;
 import java.io.FileReader;
@@ -234,8 +235,8 @@ public class AlphaTab extends JTabbedPane {
         if (e != null) {
             p.setCaretPosition(e.getStartOffset());
             try {
-                Rectangle r1 = p.modelToView(e.getStartOffset());
-                Rectangle whatIWant = new Rectangle(r1.x, r1.y, r1.width, p.getVisibleRect().height);
+                Rectangle2D r1 = p.modelToView2D(e.getStartOffset());
+                Rectangle whatIWant = new Rectangle(Double.valueOf(r1.getX()).intValue(), Double.valueOf(r1.getY()).intValue(), Double.valueOf(r1.getWidth()).intValue(), p.getVisibleRect().height);
                 p.scrollRectToVisible(whatIWant);
             } catch (BadLocationException ex) {
             }
